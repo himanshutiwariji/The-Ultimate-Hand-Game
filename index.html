@@ -8,35 +8,37 @@
     <header>
       The Ultimate Hand Game
     </header>
-    
-    <button class="move-button js-rock-button">
-      <img src="Images/rock-emoji.png" class="move-icon">
-    </button>
+    <div class="btns">
+        <button class="move-button js-rock-button">
+            <img src="Images/rock-emoji.png" class="move-icon">
+        </button>
 
-    <button class="move-button js-paper-button">
-      <img src="Images/paper-emoji.png" class="move-icon">
-    </button>
+        <button class="move-button js-paper-button">
+            <img src="Images/paper-emoji.png" class="move-icon">
+        </button>
 
-    <button class="move-button js-scissors-button">
-      <img src="Images/scissors-emoji.png" class="move-icon">
-    </button>
+        <button class="move-button js-scissors-button">
+            <img src="Images/scissors-emoji.png" class="move-icon">
+        </button>
+    </div>
 
     <p class="js-score score"></p>
+    <div class="playbtn">
+        <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+        " class="reset-score-button js-reset-score-button">Reset Score</button>
 
-    <button onclick="
-      score.wins = 0;
-      score.losses = 0;
-      score.ties = 0;
-      localStorage.removeItem('score');
-      updateScoreElement();
-    " class="reset-score-button js-reset-score-button">Reset Score</button>
-
-    <button class="auto-play-button" onclick="
-      autoPlay();
-    ">Auto Play</button><br>
+        <button class="auto-play-button" onclick="
+        autoPlay();
+        ">Auto Play</button><br>
+    </div>
 
     <span class="js-result result"></span>
-    <p class="js-moves"></p>
+    <div class="js-moves"></div>
 
     <footer>
       Made with &#10084; by Himanshu
